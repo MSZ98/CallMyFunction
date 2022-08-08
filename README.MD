@@ -102,7 +102,8 @@ It checks time and calls given functions.
 ## 4.3 Callf.every()
 There are two declarations of this method:
  * `Task* every(void (*func)(), unsigned long period, int n)`
- * `Task* every(void (*func)(), unsigned long period)`</br>
+ * `Task* every(void (*func)(), unsigned long period)`
+
 It's used to call given function repeatedly, once in the given period of time
 and no more than n times. When n is less than 0 (e.g. -1), n doesn't count and
 function is called endlessly. Second declaration of Callf.every is the same
