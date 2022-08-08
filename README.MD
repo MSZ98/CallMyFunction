@@ -90,19 +90,19 @@ void loop() {
 
 # 4. Description
 ## 4.1 Callf.begin()
-`void begin(unsigned long (*timef)())`
+`void begin(unsigned long (*timef)())`</br>
 Before you start using Callf, you must give it a function by Callf.begin()
 to measure the time, just like millis(). It can obviously be any other function
 that returns constantly incrementing value, like micros() or nanos() or whatever,
 but the unit of returned time value will be inherited by all Callf methods. 
 ## 4.2 Callf.loop()
-`void loop()`
+`void loop()`</br>
 Callf.loop() has to be called as often as it's possible. Best in an infinite loop.
 It checks time and calls given functions.
 ## 4.3 Callf.every()
 There are two declarations of this method:
  * `Task* every(void (*func)(), unsigned long period, int n)`
- * `Task* every(void (*func)(), unsigned long period)`
+ * `Task* every(void (*func)(), unsigned long period)`</br>
 It's used to call given function repeatedly, once in the given period of time
 and no more than n times. When n is less than 0 (e.g. -1), n doesn't count and
 function is called endlessly. Second declaration of Callf.every is the same
@@ -112,23 +112,23 @@ It also returns pointer to object of type Task. It's like action id.
 You can for example turn of the task with Callf.stop(task) and function
 will not be called anymore.
 ## 4.4 Callf.after()
-`Task* after(void (*func)(), unsigned long time)`
+`Task* after(void (*func)(), unsigned long time)`</br>
 Function is called after given time.
 ## 4.5 Callf.four()
-`Task* four(void (*func)(), unsigned long period, unsigned long time)`
+`Task* four(void (*func)(), unsigned long period, unsigned long time)`</br>
 Sorry, for is reserved word in C++, so it has to be four.
 It works very similar as every(), but instead of specifying amount of calls to do
 you have to specify amount of time for execution.
 In other words, function is called repeatedly for specified amount of time.
 ## 4.6 Callf.done()
-`bool done(Task *task)`
+`bool done(Task *task)`</br>
 Returns true if task is completed and function will not be called anymore
 or false if function is going to be called.
 ## 4.7 Callf.len()
-`int len()`
+`int len()`</br>
 Returns a number of running tasks.
 ## 4.8 Callf.stop()
-`void stop(Task *task)`
+`void stop(Task *task)`</br>
 Forces task to stop immediately.
 ## 4.9 General description
  * When you call method Callf.begin(millis), you provide Callf with a function to measure the time
