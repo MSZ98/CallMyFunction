@@ -136,7 +136,7 @@ public:
 	}
     
     void begin() {
-        iter = NULL;
+        iter = first;
     }
     
     Task* next() {
@@ -144,7 +144,7 @@ public:
             iter = (Node*) temp;
             temp = NULL;
         }
-        if(iter == NULL) iter = first;
+        if(iter == NULL) return NULL;
         Task *task = iter->task;
         iter = (Node*) iter->next;
         return task;
