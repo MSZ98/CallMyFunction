@@ -2,7 +2,7 @@
 Arduino library to call function with time restrictions
 
 ## 2. Supported boards
-Should work on most of the boards, tested on UNO and ESP32DevKitV1
+Should work on most of the boards, tested on UNO, ESP32 and ESP8266
 
 ## 3. Usage
 ### 3.1 Example - Call function 5 times
