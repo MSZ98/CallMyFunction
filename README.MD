@@ -69,10 +69,10 @@ void loop() {
 ```
 #include <CallMyFunction.h>
 
-unsigned long time;
+unsigned long t;
 
 void f() {
-    Serial.println(String(millis() - time) + "ms from start");
+    Serial.println(String(millis() - t) + "ms from start");
 }
 
 void setup() {
@@ -80,7 +80,7 @@ void setup() {
     Callf.begin(millis);
     Callf.four(f, 0, 2);
     Serial.println("Program start");
-    time = millis();
+    t = millis();
 }
 
 void loop() {
