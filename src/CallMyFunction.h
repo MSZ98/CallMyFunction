@@ -71,7 +71,7 @@ public:
             int result = t->run(timef());
             if(result == 0) {
                 tasks.remove(t);
-                delete t;
+                // delete t;
             }
         }
     }
@@ -97,8 +97,8 @@ public:
     }
     
     void stop(Task *task) {
-        tasks.remove(task);
-        delete task;
+        Task *t = tasks.remove(task);
+        if(t != NULL) delete task;
     }
 
 };

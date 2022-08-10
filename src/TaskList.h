@@ -70,7 +70,7 @@ public:
         return n->task;
     }
     
-    	Task* remove(int index) {
+    Task* remove(int index) {
 	    if(index < 0 || index >= size) return NULL;
         Node *n = first, *p = NULL;
         for(int i = 0;i < index;i++) {
@@ -92,7 +92,9 @@ public:
     Task* remove(Task *task) {
         if(first == NULL) return NULL;
         Node *n = first, *p = NULL;
-        while(n->task != task) {
+        while(1) {
+            if(n->task == task) break;
+            if(n == NULL) return NULL;
             p = n;
             n = (Node*) n->next;
         }
