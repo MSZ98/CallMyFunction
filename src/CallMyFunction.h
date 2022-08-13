@@ -103,6 +103,6 @@ public:
 
 };
 
-Callf_t Callf;
+static Callf_t Callf;
 
 #endif /* CALLMYFUNCTION_H */
