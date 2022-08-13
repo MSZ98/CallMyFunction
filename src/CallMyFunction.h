@@ -1,6 +1,6 @@
 /*
     CallMyFunction.h
-    Version 0.0.1
+    Version 0.0.2
     Created 8.08.2022
     Author: MSZ98 (github.com/MSZ98)
 
